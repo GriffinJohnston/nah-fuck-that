@@ -139,6 +139,7 @@ main {
   margin: 0;
   padding: 0;
   min-width: 0px;
+  aspect-ratio: 410 / 545;
 
   img {
     width: 100%;
