@@ -38,8 +38,13 @@ body {
   font-size: 16px;
   line-height: 1;
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background: var(--color-bg) url(images/header.avif) top center no-repeat;
+  background-size: 1200px auto;
   font-weight: 400;
+
+  @media all and (max-width: 600px) {
+    background-size: 800px auto;
+  }
 }
 
 .header {
@@ -47,9 +52,13 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 40px var(--gutters) 60px;
+  padding: 300px var(--gutters) 60px;
   text-align: center;
   container-type: inline-size;
+
+  @media all and (max-width: 600px) {
+    padding: 180px var(--gutters) 60px;
+  }
 }
 
 .punch {
@@ -59,7 +68,8 @@ body {
 }
 
 .eyebrow {
-  max-width: clamp(225px, 40vw, 40vw);
+  max-width: clamp(200px, 40vw, 40vw);
+  filter: drop-shadow(0px 0px 25px #000);
 }
 
 .title {
@@ -67,6 +77,10 @@ body {
   display: flex;
   width: var(--width);
   margin: calc(var(--width) * 0.06) 0;
+
+  @media all and (max-width: 600px) {
+    margin-bottom: calc(var(--width) * 0.08);
+  }
 }
 
 .title img {
